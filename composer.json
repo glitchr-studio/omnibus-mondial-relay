@@ -1,0 +1,21 @@
+{
+    "name": "omnibus/mondial-relay",
+    "type": "library",
+    "description": "Omnibus Mondial Relay carrier: relay points, labels, tracking (Web_Services.asmx, no ext-soap needed).",
+    "keywords": ["shipping", "omnibus", "mondial relay", "point relais", "inpost"],
+    "license": "LGPL-3.0-or-later",
+    "authors": [{"name": "Marco Meyer", "email": "marco.meyer@glitchr.io"}],
+    "require": {
+        "php": ">=8.2",
+        "ext-simplexml": "*",
+        "omnibus/core": "^2.0",
+        "symfony/http-client-contracts": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "autoload": {"psr-4": {"Omnibus\\MondialRelay\\": ""}, "exclude-from-classmap": ["/Tests/"]},
+    "autoload-dev": {"psr-4": {"Omnibus\\MondialRelay\\Tests\\": "Tests/"}},
+    "config": {"sort-packages": true}
+}
