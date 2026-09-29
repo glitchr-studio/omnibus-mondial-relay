@@ -2,14 +2,14 @@
 
 namespace Omnibus\MondialRelay\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Action\ApiAwareInterface;
-use Omnibus\Core\Action\ApiAwareTrait;
-use Omnibus\Core\Model\Tracking as TrackingModel;
-use Omnibus\Core\Model\TrackingEvent;
-use Omnibus\Core\Model\TrackingStatus;
-use Omnibus\Core\Request\Request;
-use Omnibus\Core\Request\Tracking;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Action\ApiAwareInterface;
+use Omnibus\Action\ApiAwareTrait;
+use Omnibus\Model\Tracking as TrackingModel;
+use Omnibus\Model\TrackingEvent;
+use Omnibus\Model\TrackingStatus;
+use Omnibus\Request\Request;
+use Omnibus\Request\Tracking;
 use Omnibus\MondialRelay\Api;
 
 /**

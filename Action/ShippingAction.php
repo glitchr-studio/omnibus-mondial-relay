@@ -2,13 +2,13 @@
 
 namespace Omnibus\MondialRelay\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Action\ApiAwareInterface;
-use Omnibus\Core\Action\ApiAwareTrait;
-use Omnibus\Core\Model\Address;
-use Omnibus\Core\Model\Label;
-use Omnibus\Core\Request\Request;
-use Omnibus\Core\Request\Shipping;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Action\ApiAwareInterface;
+use Omnibus\Action\ApiAwareTrait;
+use Omnibus\Model\Address;
+use Omnibus\Model\Label;
+use Omnibus\Request\Request;
+use Omnibus\Request\Shipping;
 use Omnibus\MondialRelay\Api;
 
 /**

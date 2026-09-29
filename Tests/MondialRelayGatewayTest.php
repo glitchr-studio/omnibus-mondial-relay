@@ -2,13 +2,13 @@
 
 namespace Omnibus\MondialRelay\Tests;
 
-use Omnibus\Core\Exception\CarrierException;
-use Omnibus\Core\Exception\InvalidConfigException;
-use Omnibus\Core\Model\Address;
-use Omnibus\Core\Model\Parcel;
-use Omnibus\Core\Model\TrackingStatus;
-use Omnibus\Core\Request\Cancel;
-use Omnibus\Core\Tests\Fixtures;
+use Omnibus\Exception\CarrierException;
+use Omnibus\Exception\InvalidConfigException;
+use Omnibus\Model\Address;
+use Omnibus\Model\Parcel;
+use Omnibus\Model\TrackingStatus;
+use Omnibus\Request\Cancel;
+use Omnibus\Tests\Fixtures;
 use Omnibus\MondialRelay\Api;
 use Omnibus\MondialRelay\MondialRelayGatewayFactory;
 use PHPUnit\Framework\TestCase;
@@ -51,7 +51,7 @@ final class MondialRelayGatewayTest extends TestCase
     {
         $gateway = $this->gateway(self::soap('WSI2_CreationEtiquette', '<STAT>0</STAT><ExpeditionNum>31231652</ExpeditionNum><URL_Etiquette>/ww2/PDF/StickerMaker2.aspx?ens=BDTEST1311&amp;expedition=31231652</URL_Etiquette>'));
         $shipment = Fixtures::shipment(800);
-        $shipment = new \Omnibus\Core\Model\Shipment($shipment->sender, $shipment->recipient, $shipment->parcels, pickupPoint: 'FR-066974', reference: 'CMD-1042');
+        $shipment = new \Omnibus\Model\Shipment($shipment->sender, $shipment->recipient, $shipment->parcels, pickupPoint: 'FR-066974', reference: 'CMD-1042');
 
         $label = $gateway->ship($shipment);
 
@@ -118,7 +118,7 @@ final class MondialRelayGatewayTest extends TestCase
         self::assertSame('0612345678', Api::phone('06.12.34.56.78'));
     }
 
-    private function gateway(string ...$responses): \Omnibus\Core\GatewayInterface
+    private function gateway(string ...$responses): \Omnibus\GatewayInterface
     {
         $queue = $responses;
         $http = new MockHttpClient(function (string $method, string $url, array $options) use (&$queue) {

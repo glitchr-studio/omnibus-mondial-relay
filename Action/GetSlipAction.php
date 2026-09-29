@@ -2,12 +2,12 @@
 
 namespace Omnibus\MondialRelay\Action;
 
-use Omnibus\Core\Action\ActionInterface;
-use Omnibus\Core\Action\ApiAwareInterface;
-use Omnibus\Core\Action\ApiAwareTrait;
-use Omnibus\Core\Model\Label;
-use Omnibus\Core\Request\GetSlip;
-use Omnibus\Core\Request\Request;
+use Omnibus\Action\ActionInterface;
+use Omnibus\Action\ApiAwareInterface;
+use Omnibus\Action\ApiAwareTrait;
+use Omnibus\Model\Label;
+use Omnibus\Request\GetSlip;
+use Omnibus\Request\Request;
 use Omnibus\MondialRelay\Api;
 
 /** WSI3_GetEtiquettes: a booked label again, 10x15 (thermal printers), else A4. */

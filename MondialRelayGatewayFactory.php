@@ -2,9 +2,9 @@
 
 namespace Omnibus\MondialRelay;
 
-use Omnibus\Core\Config;
-use Omnibus\Core\Exception\InvalidConfigException;
-use Omnibus\Core\GatewayFactory;
+use Omnibus\Config;
+use Omnibus\Exception\InvalidConfigException;
+use Omnibus\GatewayFactory;
 use Omnibus\MondialRelay\Action\GetSlipAction;
 use Omnibus\MondialRelay\Action\PickupAction;
 use Omnibus\MondialRelay\Action\ShippingAction;
@@ -17,7 +17,7 @@ use Omnibus\MondialRelay\Action\TrackingAction;
  *     sandbox: true                                   # Mondial Relay's public test brand, no contract needed
  *     collection: CCC                                 # CCC: collected at the shop; REL: dropped at a relay
  *     download_labels: false                          # true: the PDF inline in the Label, not only its URL
- *     rates: [...]                                    # no rating service: Omnibus\Core\Action\ConfiguredRatingAction
+ *     rates: [...]                                    # no rating service: Omnibus\Action\ConfiguredRatingAction
  *
  * No rating nor cancellation service: prices are the shop's contract, and a
  * label not handed over simply expires.

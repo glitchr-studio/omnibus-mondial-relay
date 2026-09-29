@@ -2,7 +2,7 @@
 
 namespace Omnibus\MondialRelay;
 
-use Omnibus\Core\Exception\CarrierException;
+use Omnibus\Exception\CarrierException;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
