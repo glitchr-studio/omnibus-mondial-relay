@@ -23,7 +23,8 @@ final class GetSlipAction implements ActionInterface, ApiAwareInterface
 
     public function supports(Request $request): bool
     {
-        return $request instanceof GetSlip && Label::PDF === $request->format;
+        // isset: the gateway probes support with a request built without its constructor
+        return $request instanceof GetSlip && (!isset($request->format) || Label::PDF === $request->format);
     }
 
     public function execute(Request $request): void
