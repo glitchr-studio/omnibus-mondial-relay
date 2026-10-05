@@ -18,7 +18,11 @@ final class Api
     public const SITE = 'https://www.mondialrelay.com';
     private const NS = 'http://www.mondialrelay.fr/webservice/';
 
-    /** Mondial Relay's public test brand: works on the live endpoint, books nothing. */
+    /**
+     * Mondial Relay's public test brand: works on the live endpoint, books
+     * nothing. Published by Mondial Relay in its integration documentation,
+     * the same for everyone: test identifiers, not a secret.
+     */
     public const TEST_ENSEIGNE = 'BDTEST13';
     public const TEST_PRIVATE_KEY = 'PrivateK';
 

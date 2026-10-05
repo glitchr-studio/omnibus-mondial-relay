@@ -43,6 +43,7 @@ final class MondialRelayGatewayTest extends TestCase
         self::assertSame('"http://www.mondialrelay.fr/webservice/WSI4_PointRelais_Recherche"', $this->header('soapaction'));
         $params = $this->params('WSI4_PointRelais_Recherche');
         self::assertSame(['Enseigne', 'Pays', 'NumPointRelais', 'Ville', 'CP', 'Latitude', 'Longitude', 'Taille', 'Poids', 'Action', 'DelaiEnvoi', 'RayonRecherche', 'TypeActivite', 'NACE', 'NombreResultats', 'Security'], array_keys($params));
+        // BDTEST13 / PrivateK: Mondial Relay's public test brand (Api::TEST_ENSEIGNE, Api::TEST_PRIVATE_KEY), published for everyone - test identifiers, not a secret.
         self::assertSame(['BDTEST13', 'FR', '', 'PARIS', '75009', '', '', '', '800', '24R', '0', '', '', '', '5'], array_slice(array_values($params), 0, 15));
         self::assertSame(strtoupper(md5(implode('', array_slice(array_values($params), 0, 15)).'PrivateK')), $params['Security']);
     }
