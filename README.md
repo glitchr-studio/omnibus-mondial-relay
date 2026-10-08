@@ -26,4 +26,4 @@ omnibus:
 
 No rating nor cancellation service: prices are the shop's contract, and a label not handed over expires.
 
-License: LGPL-3.0-or-later.
+License: MIT since 2026-10-09; earlier versions remain published under LGPL-3.0-or-later.
